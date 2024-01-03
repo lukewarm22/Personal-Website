@@ -15,7 +15,7 @@ async function Work() {
     <ul>
       {work.map((work) => (
         <li key={work.id} className="underline">
-          <Link href={`/work/${work.id}`} >
+          <Link href={`/works/${work.id}`} >
             {" "}
             {work.name}{" "}
           </Link>
@@ -35,10 +35,11 @@ export default function Home() {
           fontFamily: "sans-serif",
         }}
       >
-        Home
+        Work
       </h1>
-      <Link href="/works">Works </Link>
-      
+      <Suspense fallback={<p>Loading...</p>}>
+        <Work />
+      </Suspense>
     </section>
   );
 }
