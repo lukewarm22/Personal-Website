@@ -3,7 +3,7 @@ import Link from "next/link";
 import postgres from "postgres";
 import { Suspense } from "react";
 
-const sql = postgres(process.env.POSTGRES_URL!);
+const sql = postgres(process.env.DATABASE_URL!);
 
 
 
