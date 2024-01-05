@@ -1,44 +1,94 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import postgres from "postgres";
-import { Suspense } from "react";
 
-const sql = postgres(process.env.DATABASE_URL!);
+import Button from "@mui/material/Button";
 
-
-
-async function Work() {
-  const work = await sql`
-  SELECT * FROM work
-  `;
-  return (
-    <ul>
-      {work.map((work) => (
-        <li key={work.id} className="underline">
-          <Link href={`/work/${work.id}`} >
-            {" "}
-            {work.name}{" "}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
-}
 export default function Home() {
   return (
-    <section>
+    <div style={{ minHeight: "80%" }}>
       <h1
         style={{
           fontSize: "3rem",
           fontWeight: "bold",
           textAlign: "center",
+          marginRight: "10%",
           fontFamily: "sans-serif",
+          paddingTop: "15%",
+          marginBottom: 2,
         }}
       >
-        Home
+        Hello I'm Luke Jordan
       </h1>
-      <Link href="/works">Works </Link>
-      
-    </section>
+      <p style={{marginTop: 0,marginLeft:"32.7%", width:"25%"}}>
+        I am a software developer who is passionate about creating technology. Whether that technology is web applications, video games, or anything in between, I want to create something that I am proud of and that others can enjoy.
+      </p>
+
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "burlywood",
+          width: "15%",
+          height: 100,
+          fontSize: "27px",
+          marginLeft: "10%",
+          marginTop: "2%",
+        }}
+        onClick={() => {
+          window.location.href = "/projects";
+        }}
+      >
+        Projects
+      </Button>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "burlywood",
+          width: "15%",
+          height: 100,
+          fontSize: "27px",
+          marginLeft: "25%",
+          marginTop: "2%",
+        }}
+        onClick={() => {
+          window.location.href = "/projects";
+        }}
+      >
+        Projects
+      </Button>
+      <br/>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "burlywood",
+          width: "15%",
+          height: 100,
+          fontSize: "27px",
+          marginLeft: "30%",
+          marginTop: "2%",
+        }}
+        onClick={() => {
+          window.location.href = "/projects";
+        }}
+      >
+        About Me
+      </Button>
+      <Button
+        variant="contained"
+        sx={{
+          backgroundColor: "burlywood",
+          width: "15%",
+          height: 100,
+          fontSize: "27px",
+          marginLeft: "25%",
+          marginTop: "2%",
+        }}
+        onClick={() => {
+          window.location.href = "/projects";
+        }}
+      >
+        Projects
+      </Button>
+    </div>
   );
 }
