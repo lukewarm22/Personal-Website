@@ -72,10 +72,10 @@ export default function Home() {
           marginTop: "2%",
         }}
         onClick={() => {
-          window.location.href = "/projects";
+          window.location.href = "https://random.dog";
         }}
       >
-        Projects
+        Picture Of Dog
       </Button>
       <br />
       <Button
