@@ -9,14 +9,19 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  }
 
   useEffect(() => {
-    window.addEventListener("resize", () => {setWindowWidth(window.innerWidth)});
-     isMobile = windowWidth <= 500;
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }
-  , [windowWidth])
-  var isMobile = windowWidth <= 500;
+  , [])
+  const isMobile = windowWidth <= 500;
   if(!isMobile) return (
     
     <div style={{ minHeight: "80%" }}>
