@@ -172,7 +172,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "35%",
+          width: "40%",
           height: 200,
           fontSize: "27px",
           marginLeft: "5%",
@@ -188,10 +188,10 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "35%",
+          width: "40%",
           height: 200,
           fontSize: "27px",
-          marginLeft: "23%",
+          marginLeft: "20%",
           marginTop: "2%",
         }}
         onClick={() => {
@@ -205,7 +205,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "35%",
+          width: "40%",
           height: 200,
           fontSize: "27px",
           marginLeft: "5%",
@@ -221,10 +221,10 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "35%",
+          width: "40%",
           height: 200,
           fontSize: "27px",
-          marginLeft: "23%",
+          marginLeft: "20%",
           marginTop: "2%",
         }}
         onClick={() => {
