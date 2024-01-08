@@ -1,37 +1,58 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
+import personalPic from "../public/me.jpg";
 import Button from "@mui/material/Button";
 
 export default function Home() {
   return (
+    
     <div style={{ minHeight: "80%" }}>
+      <img
+        src="/me.jpg"
+        alt="picture of me"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{
+          display: "block",
+          width: 250,
+          height: 250,
+          marginLeft: "auto",
+          marginRight: "auto",
+          borderRadius: "100%",
+          marginTop: "5%",
+          borderColor: "black",
+          borderStyle: "solid",
+          borderWidth: 4,
+        }}
+      />
       <h1
         style={{
-          fontSize: "3rem",
+          color: "peru",
+          fontSize: "4rem",
           fontWeight: "bold",
           textAlign: "center",
-          marginRight: "10%",
+          marginRight: "auto",
+          marginLeft: "auto",
           fontFamily: "sans-serif",
-          paddingTop: "15%",
-          marginBottom: 2,
+          marginBottom: "3%",
+          paddingRight: 0,
+          marginTop:2
         }}
       >
-        Hello I'm Luke Jordan
+      Luke Jordan
       </h1>
-      <p style={{marginTop: 0,marginLeft:"32.7%", width:"25%"}}>
-        I am a software developer who is passionate about creating technology. Whether that technology is web applications, video games, or anything in between, I want to create something that I am proud of and that others can enjoy.
-      </p>
+
 
       <Button
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "15%",
+          width: "20%",
           height: 100,
           fontSize: "27px",
-          marginLeft: "10%",
+          marginLeft: "5%",
           marginTop: "2%",
         }}
         onClick={() => {
@@ -44,7 +65,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "15%",
+          width: "20%",
           height: 100,
           fontSize: "27px",
           marginLeft: "25%",
@@ -56,15 +77,15 @@ export default function Home() {
       >
         Projects
       </Button>
-      <br/>
+      <br />
       <Button
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "15%",
+          width: "20%",
           height: 100,
           fontSize: "27px",
-          marginLeft: "30%",
+          marginLeft: "28%",
           marginTop: "2%",
         }}
         onClick={() => {
@@ -77,7 +98,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "15%",
+          width: "20%",
           height: 100,
           fontSize: "27px",
           marginLeft: "25%",
@@ -87,7 +108,7 @@ export default function Home() {
           window.location.href = "/projects";
         }}
       >
-        Projects
+        Contact Me
       </Button>
     </div>
   );
