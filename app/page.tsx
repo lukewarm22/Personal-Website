@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import personalPic from "../public/me.JPG";
 import Button from "@mui/material/Button";
 import { useState, useEffect } from "react";
 
