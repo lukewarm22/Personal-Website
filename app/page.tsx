@@ -175,7 +175,7 @@ export default function Home() {
           width: "40%",
           height: 200,
           fontSize: "27px",
-          marginLeft: "5%",
+          marginLeft: "3%",
           marginTop: "2%",
         }}
         onClick={() => {
@@ -208,7 +208,7 @@ export default function Home() {
           width: "40%",
           height: 200,
           fontSize: "27px",
-          marginLeft: "5%",
+          marginLeft: "3%",
           marginTop: "2%",
         }}
         onClick={() => {
