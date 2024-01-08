@@ -13,9 +13,10 @@ export default function Home() {
 
   useEffect(() => {
     window.addEventListener("resize", () => {setWindowWidth(window.innerWidth)});
-    const isMobile = windowWidth <= 500;
+     isMobile = windowWidth <= 500;
   }
   , [windowWidth])
+  var isMobile = windowWidth <= 500;
   if(!isMobile) return (
     
     <div style={{ minHeight: "80%" }}>
