@@ -3,15 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import personalPic from "../public/me.jpg";
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 
 export default function Home() {
   
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  window.addEventListener("resize", () => {setWindowWidth(window.innerWidth)});
-  const isMobile = windowWidth <= 500;
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {setWindowWidth(window.innerWidth)});
+    const isMobile = windowWidth <= 500;
+  }
+  , [windowWidth])
   if(!isMobile) return (
     
     <div style={{ minHeight: "80%" }}>
