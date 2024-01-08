@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import personalPic from "../public/me.jpg";
+import personalPic from "../public/me.JPG";
 import Button from "@mui/material/Button";
 import { useState, useEffect } from "react";
 
@@ -26,7 +26,7 @@ export default function Home() {
     
     <div style={{ minHeight: "80%" }}>
       <img
-        src="/me.jpg"
+        src="/me.JPG"
         alt="picture of me"
         width={0}
         height={0}
@@ -132,7 +132,7 @@ export default function Home() {
   else return(
     <div style={{ minHeight: "80%" }}>
       <img
-        src="/me.jpg"
+        src="/me.JPG"
         alt="picture of me"
         width={0}
         height={0}
