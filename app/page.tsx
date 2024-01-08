@@ -172,7 +172,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "33%",
+          width: "35%",
           height: 200,
           fontSize: "27px",
           marginLeft: "5%",
@@ -188,7 +188,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "33%",
+          width: "35%",
           height: 200,
           fontSize: "27px",
           marginLeft: "25%",
@@ -205,7 +205,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "33%",
+          width: "35%",
           height: 200,
           fontSize: "27px",
           marginLeft: "5%",
@@ -221,7 +221,7 @@ export default function Home() {
         variant="contained"
         sx={{
           backgroundColor: "burlywood",
-          width: "33%",
+          width: "35%",
           height: 200,
           fontSize: "27px",
           marginLeft: "25%",
