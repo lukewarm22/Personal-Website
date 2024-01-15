@@ -2,37 +2,58 @@ import Image from "next/image";
 import Link from "next/link";
 import postgres from "postgres";
 import { Suspense } from "react";
+import { Grid, Button } from "@mui/material";
+import MakeWork from "./MakeWork";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const sql = postgres(process.env.DATABASE_URL!);
-
-
 
 async function Work() {
   const work = await sql`
   SELECT * FROM work
   `;
   return (
-    <ul>
+    <Grid
+      sx={{
+        marginTop: "3%",
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+      }}
+    >
       {work.map((work) => (
-        <li key={work.id} className="underline">
-          <Link href={`/projects/${work.id}`} >
-            {" "}
-            {work.name}{" "}
-          </Link>
-        </li>
+        <MakeWork
+          key={work.id}
+          name={work.name}
+          image={work.image}
+          link={work.link}
+        />
       ))}
-    </ul>
+    </Grid>
   );
 }
 export default function Home() {
   return (
     <section>
+      <Link href="/">
+        <Button
+          startIcon={<ArrowBackIcon />}
+          style={{
+            backgroundColor: "transparent",
+            borderWidth: 0,
+            color: "peru",
+          }}
+        >
+          Go Back
+        </Button>
+      </Link>
       <h1
         style={{
+          color: "peru",
           fontSize: "3rem",
           fontWeight: "bold",
           textAlign: "center",
           fontFamily: "sans-serif",
+          marginTop: "1%",
         }}
       >
         Projects
