@@ -206,7 +206,7 @@ export default function Home() {
             marginTop: "2%",
           }}
           onClick={() => {
-            window.location.href = "/projects";
+            window.location.href = "/about";
           }}
         >
           About Me
@@ -222,7 +222,7 @@ export default function Home() {
             marginTop: "2%",
           }}
           onClick={() => {
-            window.location.href = "/projects";
+            window.location.href = "mailto:luke@lukejordan.dev";
           }}
         >
           Contact Me
