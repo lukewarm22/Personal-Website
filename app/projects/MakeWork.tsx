@@ -41,7 +41,7 @@ export default function MakeWork({
           <h2>{name}</h2>
 
           <a href={link} target="_blank" rel="noreferrer">
-            <Image src={image} alt={name} width={150} height={100} />
+            <Image src={image} alt={name} width={140} height={93.333} />
           </a>
         </div>
       </Paper>
