@@ -17,6 +17,7 @@ async function Work() {
       sx={{
         marginTop: "3%",
         display: "grid",
+        margin: "auto",
         gridTemplateColumns: "repeat(2, 1fr)",
       }}
     >
@@ -41,6 +42,7 @@ export default function Home() {
             backgroundColor: "transparent",
             borderWidth: 0,
             color: "peru",
+            fontSize: "1.25rem",
           }}
         >
           Go Back
